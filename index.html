@@ -32,17 +32,310 @@
 <body>
     <header>
         <!-- Navbar Section -->
-        <nav>
-
+        <nav class="max-w-screen-xl mx-auto raleway flex justify-between items-center my-14">
+            <div>
+                <h1 class="text-4xl font-extrabold">G-Ticket</h1>
+            </div>
+            <div>
+                <ul class="flex justify-between items-center gap-5 font-semibold">
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Destination">Destination</a></li>
+                    <li><a href="Search">Search</a></li>
+                </ul>
+            </div>
+            <button
+                class="flex items-center justify-between gap-1 btn bg-[#E8FAE7] hover:bg-green-300 border-green-300">
+                <p class="text-green-500">Bus</p>
+                <img src="./images/bus-icon.png" alt="">
+            </button>
         </nav>
         <!-- Banner Section -->
-        <div>
-
+        <div
+            class="max-w-screen-xl mx-auto text-center bg-[url(./images/banner.png)] bg-no-repeat bg-cover min-h-[550px] flex items-center justify-center rounded-3xl">
+            <div class="space-y-5">
+                <h1 class="raleway text-6xl font-extrabold text-white">End-to-End Travel with</h1>
+                <h2 class="raleway text-[#1DD100] text-6xl font-extrabold">GreenLine Paribahan</h2>
+                <p class="w-2/4 mx-auto text-white">Greenline Paribahan is a leading bus service in Bangladesh, known
+                    for its comfortable, air-conditioned coaches connecting major cities like Dhaka and Chittagong.
+                </p>
+                <button class="btn text-black text-xl bg-[#23CF27] border-none hover:bg-green-500">Buy Tickets</button>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- Best offers Section -->
+        <div class="max-w-screen-xl mx-auto mt-32">
+            <h1 class="raleway text-4xl font-bold text-center">Best offers for you</h1>
+            <!-- COUPON Section -->
+            <div class="flex items-center justify-around mt-12 gap-6">
+                <!-- 15% off -->
+                <div class="bg-[#FFBF0F] rounded-3xl flex items-center justify-around w-full">
+                    <!-- text -->
+                    <div class="inter space-y-2">
+                        <h1 class="text-4xl font-black">15% OFF</h1>
+                        <h4 class="text-xl font-semibold">on your next purchase</h4>
+                        <p class="text-lg font-medium text-[#82611B]">use by May 2024</p>
+                    </div>
+                    <!-- divider -->
+                    <img src="./images/cupon-devider.png" alt="">
+                    <!-- coupon -->
+                    <div class="raleway">
+                        <h1 class="text-3xl font-bold">NEW15</h1>
+                        <p class="text-lg font-medium text-[#82611B]">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- 20% off -->
+                <div class="bg-[#F78C9C] rounded-3xl flex items-center justify-around w-full">
+                    <!-- text -->
+                    <div class="inter space-y-2">
+                        <h1 class="text-4xl font-black">20% OFF</h1>
+                        <h4 class="text-xl font-semibold">on your next purchase</h4>
+                        <p class="text-lg font-medium text-[#82611B]">use by May 2024</p>
+                    </div>
+                    <!-- divider -->
+                    <img src="./images/cupon-devider.png" alt="">
+                    <!-- coupon -->
+                    <div class="raleway">
+                        <h1 class="text-3xl font-bold">Couple 20</h1>
+                        <p class="text-lg font-medium text-[#82611B] text-center">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16 mb-32">
+                <button class="btn border-2 border-green-300 bg-white text-[#1DD100]">See All Offers</button>
+            </div>
+        </div>
+        <!-- GreenLine Paribahan -->
+        <div class="bg-[#F7F8F8] border-2 border-t-[#1DD100] rounded-3xl">
+            <!-- Bus Info -->
+            <div class="text-center space-y-3 pt-32">
+                <h1 class="text-4xl font-bold raleway">GreenLine Paribahan</h1>
+                <p class="text-lg inter w-[70%] mx-auto">Greenline Paribahan is a prominent bus service provider in
+                    Bangladesh, renowned for offering comfortable and reliable intercity travel with its fleet of
+                    modern, air-conditioned coaches. It serves key routes connecting major cities such as Dhaka,
+                    Chittagong, and Cox's Bazar, enhancing connectivity and convenience for passengers.</p>
+            </div>
+            <!-- Available Seats & Price -->
+            <div class="max-w-screen-xl mx-auto">
 
+                <!-- Bus Route & Price -->
+                <div class="mt-12 bg-white rounded-xl flex items-center justify-around px-8">
+                    <!-- Available Seats & Route -->
+                    <div>
+                        <!-- Available Seats -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-center gap-2">
+                                <img src="./images/bus-logo.png" alt="">
+                                <div>
+                                    <h1 class="text-3xl font-bold">GreenLine Paribahan</h1>
+                                    <p>Coach-009-WEB | AC_Business</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center gap-2 bg-[#DDF7DA] p-4 rounded-xl">
+                                <img src="./images/seat-green.png" alt="">
+                                <p class="text-[#1DD100] font-medium"><span>40</span> Seats left</p>
+                            </div>
+                        </div>
+                        <!-- Route -->
+                        <div class="bg-[#F7F8F8] mt-8 rounded-xl p-5 space-y-5">
+                            <div class="flex justify-between items-center">
+                                <p class="font-semibold text-lg text-[#65686E]">Route</p>
+                                <p class="font-semibold text-lg">Dhaka-Sylhet</p>
+                            </div>
+                            <hr class="border-dashed">
+                            <div class="flex justify-between items-center">
+                                <p class="font-semibold text-lg text-[#65686E]">Departure Time</p>
+                                <p class="font-semibold text-lg">9:00 PM</p>
+                            </div>
+                            <hr class="border-dashed">
+                            <div class="flex items-center justify-between gap-3">
+                                <p class="bg-[#EBECED] font-medium p-3 rounded-2xl">Boarding Point- Laxmipur</p>
+                                <p class="bg-[#EBECED] font-medium p-3 rounded-2xl">Dropping Point- Bogura</p>
+                                <p class="bg-[#EBECED] font-medium p-3 rounded-2xl">Est. Time 11 Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Divider -->
+                    <img src="./images/info-devider.png" alt="">
+                    <!-- Per Seat Price -->
+                    <div class="raleway text-center space-y-2">
+                        <div class="text-center">
+                            <img class="w-fit mx-auto" src="./images/fare.png" alt="">
+                        </div>
+                        <h1 class="text-3xl font-bold">550 Taka</h1>
+                        <p class="text-2xl font-semibold text-[#686A71]">Per Seat</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Select Your Seat -->
+            <div class="max-w-screen-xl mx-auto mt-6 bg-white rounded-xl flex justify-between">
+                <!-- All Seats Section -->
+                <div class="p-5 flex-1">
+                    <!-- Info -->
+                    <div class="space-y-4">
+                        <h1 class="raleway text-2xl font-semibold">Select Your Seat</h1>
+                        <hr class="border-dashed">
+                        <div class="flex items-center justify-between">
+                            <div class="gap-2 flex items-center justify-center">
+                                <img src="./images/seat-gray.png" alt="">
+                                <p class="text-[#818388]">Available</p>
+                            </div>
+                            <div class="gap-2 flex items-center justify-center">
+                                <img src="./images/seat-green-filled.png" alt="">
+                                <p class="text-[#1DD100]">Selected</p>
+                            </div>
+                        </div>
+                        <hr class="border-dashed">
+                        <div class="text-right">
+                            <button class="btn bg-gray-300 mr-3 px-5"><img src="./images/steering-wheel.png" alt=""></button>
+                        </div>
+                    </div>
+                    <!-- Seat Lists -->
+                    <div class="mt-4 space-y-4">
+                        <!-- A -->
+                        <div class="flex items-center justify-around">
+                            <h1>A</h1>
+                            <button class="btn px-6">A1</button>
+                            <button class="btn px-6">A2</button>
+                            <button class="btn px-6">A3</button>
+                            <button class="btn px-6">A4</button>
+                        </div>
+                        <!-- B -->
+                        <div class="flex items-center justify-around">
+                            <h1>B</h1>
+                            <button class="btn px-6">B1</button>
+                            <button class="btn px-6">B2</button>
+                            <button class="btn px-6">B3</button>
+                            <button class="btn px-6">B4</button>
+                        </div>
+                        <!-- C -->
+                        <div class="flex items-center justify-around">
+                            <h1>C</h1>
+                            <button class="btn px-6">C1</button>
+                            <button class="btn px-6">C2</button>
+                            <button class="btn px-6">C3</button>
+                            <button class="btn px-6">C4</button>
+                        </div>
+                        <!-- D -->
+                        <div class="flex items-center justify-around">
+                            <h1>D</h1>
+                            <button class="btn px-6">D1</button>
+                            <button class="btn px-6">D2</button>
+                            <button class="btn px-6">D3</button>
+                            <button class="btn px-6">D4</button>
+                        </div>
+                        <!-- E -->
+                        <div class="flex items-center justify-around">
+                            <h1>E</h1>
+                            <button class="btn px-6">E1</button>
+                            <button class="btn px-6">E2</button>
+                            <button class="btn px-6">E3</button>
+                            <button class="btn px-6">E4</button>
+                        </div>
+                        <!-- F -->
+                        <div class="flex items-center justify-around">
+                            <h1>F</h1>
+                            <button class="btn px-6">F1</button>
+                            <button class="btn px-6">F2</button>
+                            <button class="btn px-6">F3</button>
+                            <button class="btn px-6">F4</button>
+                        </div>
+                        <!-- G -->
+                        <div class="flex items-center justify-around">
+                            <h1>G</h1>
+                            <button class="btn px-6">G1</button>
+                            <button class="btn px-6">G2</button>
+                            <button class="btn px-6">G3</button>
+                            <button class="btn px-6">G4</button>
+                        </div>
+                        <!-- H -->
+                        <div class="flex items-center justify-around">
+                            <h1>H</h1>
+                            <button class="btn px-6">H1</button>
+                            <button class="btn px-6">H2</button>
+                            <button class="btn px-6">H3</button>
+                            <button class="btn px-6">H4</button>
+                        </div>
+                        <!-- I -->
+                        <div class="flex items-center justify-around">
+                            <h1>I</h1>
+                            <button class="btn px-6">I1</button>
+                            <button class="btn px-6">I2</button>
+                            <button class="btn px-6">I3</button>
+                            <button class="btn px-6">I4</button>
+                        </div>
+                        <!-- J -->
+                        <div class="flex items-center justify-around">
+                            <h1>J</h1>
+                            <button class="btn px-6">J1</button>
+                            <button class="btn px-6">J2</button>
+                            <button class="btn px-6">J3</button>
+                            <button class="btn px-6">J4</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Payment Section -->
+                <div class="inter flex-1 p-5 space-y-4 border-dashed border-l-2">
+                    <h1 class="raleway text-2xl font-semibold">Select Your Seat</h1>
+                    <hr class="border-dashed">
+                    <!-- Selected Price -->
+                    <div class="bg-[#F7F8F8] rounded-xl p-6 space-y-4">
+                        <div class="flex items-center justify-between font-medium">
+                            <h2>Seat <sup class="bg-[#1DD100] text-white px-1 rounded-xl font-bold">0</sup></h2>
+                            <h3>Class</h3>
+                            <h4>Price</h4>
+                        </div>
+                        <hr class="border border-gray-400">
+                        <!-- Total Price -->
+                        <div class="flex items-center justify-between">
+                            <p class="font-medium">Total Price</p>
+                            <p class="font-medium">BDT <span>0</span></p>
+                        </div>
+                        <!-- Coupon Apply -->
+                        <div class="flex">
+                            <input type="text" placeholder="Have any coupon?"
+                                class="outline-none px-4 py-3 rounded-xl flex-grow pl-3">
+                            <button class="btn bg-[#1DD100] text-white border-none rounded-xl">Apply
+                            </button>
+                        </div>
+                        <!-- Grand Total -->
+                        <div class="flex items-center justify-between">
+                            <p class="font-medium">Grand Total</p>
+                            <p class="font-medium">BDT <span>0</span></p>
+                        </div>
+                    </div>
+                    <!-- Passenger Details -->
+                    <div>
+                        <form class="space-y-4">
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="name">Passenger Name*</label><br>
+                                <input type="text" id="name" class="outline-none p-3 rounded-lg w-full border" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="number">Phone Number*</label><br>
+                                <input type="number" name="" placeholder="Enter Your Phone" id="number" class="outline-none p-3 rounded-lg w-full border" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-semibold" for="email">Email ID</label><br>
+                                <input type="email" name="" id="email" class="outline-none p-3 rounded-lg w-full border" placeholder="Enter Your Email">
+                            </div>
+                            <!-- Next Button -->
+                            <div>
+                                <button class="btn raleway bg-[#1DD100] text-white text-xl font-extrabold w-full rounded-xl">Next</button>
+                            </div>
+                            <!-- Terms & Conditions -->
+                            <div class="flex justify-around underline">
+                                <p>Terms and Conditions</p>
+                                <p>Cancellation Policy</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>

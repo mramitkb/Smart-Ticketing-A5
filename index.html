@@ -288,18 +288,17 @@
                             <h3>Class</h3>
                             <h4>Price</h4>
                         </div>
-                        <hr class="border border-gray-400">
+                        <hr class="border-dashed">
                         <!-- New Selected Seats -->
                         <div id="selected-seat">
-                            <!-- <h2>Seat <sup id="seat-count" class="bg-[#1DD100] text-white px-1 rounded-xl font-bold">0</sup></h2>
-                            <h3>Class</h3>
-                            <h4>Price</h4> -->
+                
                         </div>
                         <!-- Total Price -->
                         <div class="flex items-center justify-between">
                             <p class="font-medium">Total Price</p>
-                            <p class="font-medium">BDT <span>0</span></p>
+                            <p class="font-medium">BDT <span id="total-price">0</span></p>
                         </div>
+                        <hr class="border">
                         <!-- Coupon Apply -->
                         <div class="flex">
                             <input type="text" placeholder="Have any coupon?"
@@ -310,7 +309,7 @@
                         <!-- Grand Total -->
                         <div class="flex items-center justify-between">
                             <p class="font-medium">Grand Total</p>
-                            <p class="font-medium">BDT <span>0</span></p>
+                            <p class="font-medium">BDT <span id="grand-total">0</span></p>
                         </div>
                     </div>
                     <!-- Passenger Details -->
@@ -330,7 +329,7 @@
                             </div>
                             <!-- Next Button -->
                             <div>
-                                <button class="btn raleway bg-[#1DD100] text-white text-xl font-extrabold w-full rounded-xl">Next</button>
+                                <button id="next" disabled class="btn raleway bg-[#1DD100] text-white text-xl font-extrabold w-full rounded-xl">Next</button>
                             </div>
                             <!-- Terms & Conditions -->
                             <div class="flex justify-around underline">

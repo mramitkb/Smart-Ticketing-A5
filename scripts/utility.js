@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 const allSeats = document.getElementsByClassName('seats');
 let count = 0;
-let forty = 0;
+// let forty = 0;
 for(const seat of allSeats){
     
     seat.addEventListener('click', function(event){
@@ -27,19 +27,17 @@ for(const seat of allSeats){
         // 40 seat decrease
         const fortySeats = document.getElementById('40-seats').innerText;
         const convertFortySeats = parseInt(fortySeats);
-        forty = convertFortySeats - 1;
+        const forty = convertFortySeats - 1;
         setInnerText('40-seats', forty);
 
-
-        // New child add
-        // const seatName = event.target.parentNode.parentNode.parentNode.parentNode.childNodes[7].childNodes[7].childNodes[7].innerText;
+        // Seat Name
         const seatName = seat.innerText;
-        console.log(seatName)
-
+        
         // add them to the cart list
         const addList = document.getElementById('selected-seat');
+        
         const li = document.createElement('li');
-        // li.classList.add = 'flex';
+        li.classList.add('flex', 'items-center', 'justify-between')
         const p = document.createElement('p');
         p.innerText = seatName;
         const p2 = document.createElement('p')
@@ -52,10 +50,22 @@ for(const seat of allSeats){
         li.appendChild(p)
         li.appendChild(p2)
         li.appendChild(p3)
-        // li.innerText = p + p2 + p3;
         addList.appendChild(li)
         
+
+        totalPrice('total-price', convertPerSeatPrice)
     })
+}
+
+// Modal
+
+// Total Price
+function totalPrice(id, value){
+    const totalPrice = document.getElementById(id).innerText;
+    const convertTotalPrice = parseInt(totalPrice);
+    const sum = convertTotalPrice + value;
+    setInnerText('total-price', sum)
+    // setInnerText('grand-total', sum)
 }
 
 
@@ -63,3 +73,21 @@ for(const seat of allSeats){
 function setInnerText(id, value){
     document.getElementById(id).innerText = value;
 }
+
+
+// For Modal
+// function hideElementById(elementId){
+//     const element = document.getElementById(elementId);
+//     element.classList.add('hidden');
+// }
+
+// function showElementById(elementId){
+//     const element = document.getElementById(elementId);
+//     element.classList.remove('hidden');
+// }
+
+// function  modalOpenClose(){
+//     hideElementById('home');
+//     showElementById('playground');
+//     gameLoop()
+// }

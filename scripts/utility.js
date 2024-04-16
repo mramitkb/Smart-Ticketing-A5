@@ -6,10 +6,8 @@ document.getElementById('buy-ticket-btn').addEventListener('click', function(){
 
 
 // Get Single Seat with click
-
 const allSeats = document.getElementsByClassName('seats');
 let count = 0;
-// let forty = 0;
 for(const seat of allSeats){
     
     seat.addEventListener('click', function(event){
@@ -53,7 +51,6 @@ for(const seat of allSeats){
     })
 }
 
-// Modal
 
 // Total Price
 function totalPrice(id, value){

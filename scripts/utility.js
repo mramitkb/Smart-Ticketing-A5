@@ -66,7 +66,6 @@ function totalPrice(id, value){
 function grandTotal(category){
     const totalPrice = document.getElementById('total-price').innerText;
     const convertTotalPrice = parseInt(totalPrice);
-    console.log(typeof totalPrice)
     setInnerText('grand-total', convertTotalPrice);
 }
 
@@ -103,3 +102,25 @@ const phoneNumber = document.getElementById('phone-number').addEventListener('ke
     }
     
 })
+
+
+    // // 20% Coupon
+    document.getElementById('apply-btn').addEventListener('click', function(){
+        const discount15 = document.getElementById('NEW15');
+        const discount20 = document.getElementById('Couple-20');
+
+        const totalPrice = document.getElementById('grand-total').innerText;
+        const convertTotalPrice = parseInt(totalPrice);
+
+        const discountAmount1 = convertTotalPrice * .15;
+        const discountAmount2 = convertTotalPrice * .20;
+        
+        // total - discount
+        const total = document.getElementById('total');
+        const reduceAmount = convertTotalPrice - discountAmount1;
+        const reduceAmount2 = convertTotalPrice - discountAmount2;
+        setInnerText('grand-total', reduceAmount2)
+        setInnerText('grand-total', reduceAmount)
+    })
+    
+    

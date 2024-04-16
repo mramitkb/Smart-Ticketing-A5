@@ -1,12 +1,17 @@
 // Scroll to View Ticket Section
-document.addEventListener('DOMContentLoaded', function(){
-    function scrollToBuyTicketSection(){
-        const buyTicketSection = document.getElementById('greenline-paribahan');
-        buyTicketSection.scrollIntoView({behavior: 'smooth'});
-    }
+// document.addEventListener('DOMContentLoaded', function(){
+//     function scrollToBuyTicketSection(){
+//         const buyTicketSection = document.getElementById('greenline-paribahan');
+//         buyTicketSection.scrollIntoView({behavior: 'smooth'});
+//     }
 
-    const buyTicketBtn = document.getElementById('buy-ticket-btn');
-    buyTicketBtn.addEventListener('click', scrollToBuyTicketSection);
+//     const buyTicketBtn = document.getElementById('buy-ticket-btn');
+//     buyTicketBtn.addEventListener('click', scrollToBuyTicketSection);
+// })
+
+document.getElementById('buy-ticket-btn').addEventListener('click', function(){
+    const buyTicketSection = document.getElementById('greenline-paribahan');
+        buyTicketSection.scrollIntoView({behavior: 'smooth'});
 })
 
 
@@ -75,19 +80,30 @@ function setInnerText(id, value){
 }
 
 
-// For Modal
-// function hideElementById(elementId){
-//     const element = document.getElementById(elementId);
-//     element.classList.add('hidden');
-// }
 
-// function showElementById(elementId){
-//     const element = document.getElementById(elementId);
-//     element.classList.remove('hidden');
-// }
 
-// function  modalOpenClose(){
-//     hideElementById('home');
-//     showElementById('playground');
-//     gameLoop()
-// }
+// Coupon Apply Function
+const couponApply = document.getElementById('coupon-input').addEventListener('keyup', function(event){
+    const couponText = event.target.value;
+    const applyButton = document.getElementById('apply-btn');
+    if(couponText === 'NEW15' || couponText === 'Couple 20'){
+        applyButton.removeAttribute('disabled');
+    }
+    else{
+        applyButton.setAttribute('disabled', true)
+    }
+})
+
+
+// Next Button Function for Phone Number
+const phoneNumber = document.getElementById('phone-number').addEventListener('keyup', function(event){
+    const number = event.target.value;
+    const nextButton = document.getElementById('next');
+    if(number === ''){
+        nextButton.setAttribute('disabled', true);
+    }
+    else{
+        nextButton.removeAttribute('disabled')
+    }
+    
+})

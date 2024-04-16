@@ -109,7 +109,7 @@
             </div>
         </div>
         <!-- GreenLine Paribahan -->
-        <div id="greenline-paribahan" class="bg-[#F7F8F8] border-2 border-t-[#1DD100] rounded-3xl">
+        <div id="greenline-paribahan" class="bg-[#F7F8F8] border-t-2 border-t-[#1DD100] rounded-3xl pb-32">
             <!-- Bus Info -->
             <div class="text-center space-y-3 pt-32">
                 <h1 class="text-4xl font-bold raleway">GreenLine Paribahan</h1>
@@ -306,7 +306,8 @@
                         <div class="flex">
                             <input id="coupon-input" type="text" placeholder="Have any coupon?"
                                 class="outline-none px-4 py-3 rounded-xl flex-grow pl-3">
-                            <button id="apply-btn" class="btn bg-[#1DD100] text-white border-none rounded-xl" disabled>Apply
+                            <button onclick="grandTotal()" id="apply-btn"
+                                class="btn bg-[#1DD100] text-white border-none rounded-xl" disabled>Apply
                             </button>
                         </div>
                         <!-- Grand Total -->
@@ -335,9 +336,11 @@
                             </div>
                             <!-- Next Button -->
                             <div>
-                                <button id="next" class="btn raleway bg-[#1DD100] text-white text-xl font-extrabold w-full rounded-xl" disabled>
+                                <button id="next"
+                                    class="btn raleway bg-[#1DD100] text-white text-xl font-extrabold w-full rounded-xl"
+                                    disabled>
                                     Next
-                                </button>                    
+                                </button>
                             </div>
                             <!-- Terms & Conditions -->
                             <div class="flex justify-around underline">
@@ -351,8 +354,33 @@
         </div>
     </main>
 
-    <footer>
-
+    <footer class="bg-[#030712] py-32">
+        <div class="max-w-screen-xl mx-auto">
+            <!-- Logo & Google Play -->
+            <div class="flex items-center justify-between">
+                <div class="space-y-2">
+                    <h1 class="text-white text-4xl font-extrabold">G-Ticket</h1>
+                    <p class="text-[#CDCDD0]">G-Ticket is a digital platform to make your <br>daily commuting better.
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-white">Download our app</p>
+                    <div class="text-white">
+                        <img src="./images/google play.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr class="border-dashed my-8 border-[#4F5159]">
+            <!-- Reserved -->
+            <div class="flex items-center justify-between">
+                <small class="text-[#CDCDD0]">&copy;all rights reserved, G-Ticket services Ltd. 2024</small>
+                <div class="text-white flex items-center justify-around list-none gap-6">
+                    <li>Terms & Conditions</li>
+                    <li>Return & Refund Policy</li>
+                    <li>Privacy Policy</li>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- JAVASCRIPT -->

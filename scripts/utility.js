@@ -1,13 +1,3 @@
-// Scroll to View Ticket Section
-// document.addEventListener('DOMContentLoaded', function(){
-//     function scrollToBuyTicketSection(){
-//         const buyTicketSection = document.getElementById('greenline-paribahan');
-//         buyTicketSection.scrollIntoView({behavior: 'smooth'});
-//     }
-
-//     const buyTicketBtn = document.getElementById('buy-ticket-btn');
-//     buyTicketBtn.addEventListener('click', scrollToBuyTicketSection);
-// })
 
 document.getElementById('buy-ticket-btn').addEventListener('click', function(){
     const buyTicketSection = document.getElementById('greenline-paribahan');
@@ -59,6 +49,7 @@ for(const seat of allSeats){
         
 
         totalPrice('total-price', convertPerSeatPrice)
+        grandTotal('grand-total', convertPerSeatPrice)
     })
 }
 
@@ -73,6 +64,14 @@ function totalPrice(id, value){
     // setInnerText('grand-total', sum)
 }
 
+
+// Grand Total
+function grandTotal(category){
+    const totalPrice = document.getElementById('total-price').innerText;
+    const convertTotalPrice = parseInt(totalPrice);
+    console.log(typeof totalPrice)
+    setInnerText('grand-total', convertTotalPrice);
+}
 
 // setInnerText
 function setInnerText(id, value){
